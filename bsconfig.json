@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/rescript-lang/rescript-compiler/master/docs/docson/build-schema.json",
+  "name": "rescript-react-template",
+  "reason": {
+    "react-jsx": 3
+  },
+  "bsc-flags": ["-bs-super-errors"],
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "suffix": ".bs.js",
+  "namespace": true,
+  "ppx-flags": [],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "jsx": { "version": 4, "mode": "classic" },
+  "bs-dependencies": ["@rescript/react", "bs-fetch", "bs-webapi"]
+}

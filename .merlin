@@ -1,0 +1,16 @@
+####{BSB GENERATED: NO EDIT
+B lib/bs
+FLG -open RescriptReactTemplate
+FLG -ppx '/Users/bopanna/Code/rescript-react-template/node_modules/rescript/darwin/bsc.exe -as-ppx -bs-jsx 3'
+S /Users/bopanna/Code/rescript-react-template/node_modules/rescript/lib/ocaml
+B /Users/bopanna/Code/rescript-react-template/node_modules/rescript/lib/ocaml
+FLG -w +a-4-9-20-40-41-42-50-61-102
+S /Users/bopanna/Code/rescript-react-template/node_modules/@rescript/react/lib/ocaml
+B /Users/bopanna/Code/rescript-react-template/node_modules/@rescript/react/lib/ocaml
+S /Users/bopanna/Code/rescript-react-template/node_modules/bs-fetch/lib/ocaml
+B /Users/bopanna/Code/rescript-react-template/node_modules/bs-fetch/lib/ocaml
+S /Users/bopanna/Code/rescript-react-template/node_modules/bs-webapi/lib/ocaml
+B /Users/bopanna/Code/rescript-react-template/node_modules/bs-webapi/lib/ocaml
+S src
+B lib/bs/src
+####BSB GENERATED: NO EDIT}

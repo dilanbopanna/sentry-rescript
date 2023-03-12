@@ -1,0 +1,23 @@
+rescript = 1
+g_finger := /Users/bopanna/Code/rescript-react-template/node_modules/@rescript/react/lib/ocaml/install.stamp
+g_finger := /Users/bopanna/Code/rescript-react-template/node_modules/bs-fetch/lib/ocaml/install.stamp
+g_finger := /Users/bopanna/Code/rescript-react-template/node_modules/bs-webapi/lib/ocaml/install.stamp
+rule astj
+  command = /Users/bopanna/Code/rescript-react-template/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4 -bs-jsx 3 -bs-super-errors -absname -bs-ast -o $out $i
+o src/Test.ast : astj ../../src/Test.res
+rule deps
+  command = /Users/bopanna/Code/rescript-react-template/node_modules/rescript/darwin/bsb_helper.exe -hash a450918b4e075c41a3314732bb1a9d19 -bs-ns RescriptReactTemplate $in
+  restat = 1
+o src/Test.d : deps src/Test.ast
+rule mij
+  command = /Users/bopanna/Code/rescript-react-template/node_modules/rescript/darwin/bsc.exe -bs-ns RescriptReactTemplate -I . -I src -I /Users/bopanna/Code/rescript-react-template/node_modules/@rescript/react/lib/ocaml -I /Users/bopanna/Code/rescript-react-template/node_modules/bs-fetch/lib/ocaml -I /Users/bopanna/Code/rescript-react-template/node_modules/bs-webapi/lib/ocaml -bs-super-errors  -bs-package-name rescript-react-template -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/Test-RescriptReactTemplate.cmj src/Test-RescriptReactTemplate.cmi ../../src/Test.bs.js : mij src/Test.ast
+o src/Index.ast : astj ../../src/Index.res
+o src/Index.d : deps src/Index.ast
+o src/Index-RescriptReactTemplate.cmj src/Index-RescriptReactTemplate.cmi ../../src/Index.bs.js : mij src/Index.ast
+rule build_package
+  command = /Users/bopanna/Code/rescript-react-template/node_modules/rescript/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
+  restat = 1
+o RescriptReactTemplate.cmi : build_package RescriptReactTemplate.mlmap
