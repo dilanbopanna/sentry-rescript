@@ -1,8 +1,13 @@
 10.1.4
 /Users/bopannaj/Per-Code/rescript-react-template
 0
-bsconfig.json	0x1.9614e81cp+30
+bsconfig.json	0x1.961666p+30
+packages	0x1.96166464p+30
+packages/React	0x1.96166a2cp+30
+packages/React/src	0x1.961673b4p+30
+packages/Browser	0x1.96166484p+30
+packages/Browser/src	0x1.96166484p+30
 src	0x1.9614eb14p+30
 src/Types	0x1.9615317cp+30
 ===
-/Users/bopannaj/Per-Code/rescript-react-template/node_modules/rescript/darwinarm64/rescript.exe	0x1.9615317cp+30
+/Users/bopannaj/Per-Code/rescript-react-template/node_modules/rescript/darwinarm64/rescript.exe	0x1.961677fcp+30

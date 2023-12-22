@@ -7,7 +7,7 @@ rule deps
   restat = 1
 o src/Types/Severity.d : deps src/Types/Severity.ast
 rule mij
-  command = /Users/bopannaj/Per-Code/rescript-react-template/node_modules/rescript/darwinarm64/bsc.exe -I src/Types -I src -bs-no-version-header -bs-super-errors -w +R-48 -warn-error +R -bs-package-name sentry-rescript -bs-package-output commonjs:$in_d:.bs.js $i
+  command = /Users/bopannaj/Per-Code/rescript-react-template/node_modules/rescript/darwinarm64/bsc.exe -I src/Types -I src -I packages/Browser/src -I packages/Browser -I packages/React/src -I packages/React -I packages -bs-no-version-header -bs-super-errors -w +R-48 -warn-error +R -bs-package-name sentry-rescript -bs-package-output commonjs:$in_d:.bs.js $i
   dyndep = 1
   restat = 1
 o src/Types/Severity.cmj src/Types/Severity.cmi ../../src/Types/Severity.bs.js : mij src/Types/Severity.ast

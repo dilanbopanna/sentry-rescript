@@ -1,1 +1,1 @@
-{ "dirs" : [ "src" , "src/Types" ] , "pkgs" : [] , "generated" : [] }
+{ "dirs" : [ "packages" , "packages/React" , "packages/React/src" , "packages/Browser" , "packages/Browser/src" , "src" , "src/Types" ] , "pkgs" : [] , "generated" : [] }

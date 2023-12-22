@@ -3,10 +3,16 @@
   "suffix": ".bs.js",
   "namespace": false,
   "bsc-flags": ["-bs-no-version-header", "-bs-super-errors"],
-  "sources": {
-    "dir": "src",
-    "subdirs": true
-  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "packages",
+      "subdirs": true
+    }
+  ],
   "ppx-flags": [],
   "package-specs": {
     "module": "commonjs",
