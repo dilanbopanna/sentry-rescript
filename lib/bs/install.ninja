@@ -3,15 +3,8 @@ rule cp
   command = cp $i $out
 rule touch
  command = touch $out
-o Test-RescriptReactTemplate.cmi : cp ../bs/src/Test-RescriptReactTemplate.cmi
-o Test-RescriptReactTemplate.cmj : cp ../bs/src/Test-RescriptReactTemplate.cmj
-o Test-RescriptReactTemplate.cmt : cp ../bs/src/Test-RescriptReactTemplate.cmt
-o Test.res : cp ../../src/Test.res
-o Index-RescriptReactTemplate.cmi : cp ../bs/src/Index-RescriptReactTemplate.cmi
-o Index-RescriptReactTemplate.cmj : cp ../bs/src/Index-RescriptReactTemplate.cmj
-o Index-RescriptReactTemplate.cmt : cp ../bs/src/Index-RescriptReactTemplate.cmt
-o Index.res : cp ../../src/Index.res
-o RescriptReactTemplate.cmi : cp ../bs/RescriptReactTemplate.cmi
-o RescriptReactTemplate.cmj : cp ../bs/RescriptReactTemplate.cmj
-o RescriptReactTemplate.cmt : cp ../bs/RescriptReactTemplate.cmt
-build install.stamp : touch Test-RescriptReactTemplate.cmi Test-RescriptReactTemplate.cmj Index-RescriptReactTemplate.cmi Index-RescriptReactTemplate.cmj RescriptReactTemplate.cmi RescriptReactTemplate.cmj
+o Attachment.cmi : cp ../bs/src/Types/Attachment.cmi
+o Attachment.cmj : cp ../bs/src/Types/Attachment.cmj
+o Attachment.cmt : cp ../bs/src/Types/Attachment.cmt
+o Attachment.res : cp ../../src/Types/Attachment.res
+build install.stamp : touch Attachment.cmi Attachment.cmj 

@@ -1,1 +1,1 @@
-{ "dirs" : [ "src" ] , "pkgs" : [ [ "bs-webapi" , "/Users/bopanna/Code/rescript-react-template/node_modules/bs-webapi" ] , [ "bs-fetch" , "/Users/bopanna/Code/rescript-react-template/node_modules/bs-fetch" ] , [ "@rescript/react" , "/Users/bopanna/Code/rescript-react-template/node_modules/@rescript/react" ] ] , "generated" : [] }
+{ "dirs" : [ "src" , "src/Types" ] , "pkgs" : [] , "generated" : [] }
