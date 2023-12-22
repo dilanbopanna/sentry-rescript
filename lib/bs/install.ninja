@@ -3,8 +3,20 @@ rule cp
   command = cp $i $out
 rule touch
  command = touch $out
+o Severity.cmi : cp ../bs/src/Types/Severity.cmi
+o Severity.cmj : cp ../bs/src/Types/Severity.cmj
+o Severity.cmt : cp ../bs/src/Types/Severity.cmt
+o Severity.res : cp ../../src/Types/Severity.res
 o Attachment.cmi : cp ../bs/src/Types/Attachment.cmi
 o Attachment.cmj : cp ../bs/src/Types/Attachment.cmj
 o Attachment.cmt : cp ../bs/src/Types/Attachment.cmt
 o Attachment.res : cp ../../src/Types/Attachment.res
-build install.stamp : touch Attachment.cmi Attachment.cmj 
+o Breadcrumb.cmi : cp ../bs/src/Types/Breadcrumb.cmi
+o Breadcrumb.cmj : cp ../bs/src/Types/Breadcrumb.cmj
+o Breadcrumb.cmt : cp ../bs/src/Types/Breadcrumb.cmt
+o Breadcrumb.res : cp ../../src/Types/Breadcrumb.res
+o Browseroptions.cmi : cp ../bs/src/Types/Browseroptions.cmi
+o Browseroptions.cmj : cp ../bs/src/Types/Browseroptions.cmj
+o Browseroptions.cmt : cp ../bs/src/Types/Browseroptions.cmt
+o Browseroptions.res : cp ../../src/Types/Browseroptions.res
+build install.stamp : touch Severity.cmi Severity.cmj Attachment.cmi Attachment.cmj Breadcrumb.cmi Breadcrumb.cmj Browseroptions.cmi Browseroptions.cmj 

@@ -1,5 +1,5 @@
 type attachment = {
-  data: string,
+  data: int,
   filename: string,
   contentType?: string,
   attachmentType?: string,

@@ -1,13 +1,22 @@
 rescript = 1
 rule astj
   command = /Users/bopannaj/Per-Code/rescript-react-template/node_modules/rescript/darwinarm64/bsc.exe -w +R-48 -warn-error +R -bs-v 10.1.4 -bs-no-version-header -bs-super-errors -absname -bs-ast -o $out $i
-o src/Types/Attachment.ast : astj ../../src/Types/Attachment.res
+o src/Types/Severity.ast : astj ../../src/Types/Severity.res
 rule deps
-  command = /Users/bopannaj/Per-Code/rescript-react-template/node_modules/rescript/darwinarm64/bsb_helper.exe -hash e5a5091dd5dc4e6783413e43e38d1078 $in
+  command = /Users/bopannaj/Per-Code/rescript-react-template/node_modules/rescript/darwinarm64/bsb_helper.exe -hash 75e1ad1b78d55eb0534f57c37360e9b7 $in
   restat = 1
-o src/Types/Attachment.d : deps src/Types/Attachment.ast
+o src/Types/Severity.d : deps src/Types/Severity.ast
 rule mij
   command = /Users/bopannaj/Per-Code/rescript-react-template/node_modules/rescript/darwinarm64/bsc.exe -I src/Types -I src -bs-no-version-header -bs-super-errors -w +R-48 -warn-error +R -bs-package-name sentry-rescript -bs-package-output commonjs:$in_d:.bs.js $i
   dyndep = 1
   restat = 1
+o src/Types/Severity.cmj src/Types/Severity.cmi ../../src/Types/Severity.bs.js : mij src/Types/Severity.ast
+o src/Types/Attachment.ast : astj ../../src/Types/Attachment.res
+o src/Types/Attachment.d : deps src/Types/Attachment.ast
 o src/Types/Attachment.cmj src/Types/Attachment.cmi ../../src/Types/Attachment.bs.js : mij src/Types/Attachment.ast
+o src/Types/Breadcrumb.ast : astj ../../src/Types/Breadcrumb.res
+o src/Types/Breadcrumb.d : deps src/Types/Breadcrumb.ast
+o src/Types/Breadcrumb.cmj src/Types/Breadcrumb.cmi ../../src/Types/Breadcrumb.bs.js : mij src/Types/Breadcrumb.ast
+o src/Types/Browseroptions.ast : astj ../../src/Types/Browseroptions.res
+o src/Types/Browseroptions.d : deps src/Types/Browseroptions.ast
+o src/Types/Browseroptions.cmj src/Types/Browseroptions.cmi ../../src/Types/Browseroptions.bs.js : mij src/Types/Browseroptions.ast
