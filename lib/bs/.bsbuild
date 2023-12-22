@@ -1,8 +1,13 @@
-4
+9
+Misc
+Context
+Request
 Severity
 Attachment
-Breadcrumb
-Browseroptions
+BreadCrumb
+ClientReport
+DataCategory
+BrowserOptions
 src/Types	
-1
+1
 0

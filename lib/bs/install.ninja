@@ -3,6 +3,18 @@ rule cp
   command = cp $i $out
 rule touch
  command = touch $out
+o Misc.cmi : cp ../bs/src/Types/Misc.cmi
+o Misc.cmj : cp ../bs/src/Types/Misc.cmj
+o Misc.cmt : cp ../bs/src/Types/Misc.cmt
+o Misc.res : cp ../../src/Types/Misc.res
+o Context.cmi : cp ../bs/src/Types/Context.cmi
+o Context.cmj : cp ../bs/src/Types/Context.cmj
+o Context.cmt : cp ../bs/src/Types/Context.cmt
+o Context.res : cp ../../src/Types/Context.res
+o Request.cmi : cp ../bs/src/Types/Request.cmi
+o Request.cmj : cp ../bs/src/Types/Request.cmj
+o Request.cmt : cp ../bs/src/Types/Request.cmt
+o Request.res : cp ../../src/Types/Request.res
 o Severity.cmi : cp ../bs/src/Types/Severity.cmi
 o Severity.cmj : cp ../bs/src/Types/Severity.cmj
 o Severity.cmt : cp ../bs/src/Types/Severity.cmt
@@ -11,12 +23,20 @@ o Attachment.cmi : cp ../bs/src/Types/Attachment.cmi
 o Attachment.cmj : cp ../bs/src/Types/Attachment.cmj
 o Attachment.cmt : cp ../bs/src/Types/Attachment.cmt
 o Attachment.res : cp ../../src/Types/Attachment.res
-o Breadcrumb.cmi : cp ../bs/src/Types/Breadcrumb.cmi
-o Breadcrumb.cmj : cp ../bs/src/Types/Breadcrumb.cmj
-o Breadcrumb.cmt : cp ../bs/src/Types/Breadcrumb.cmt
-o Breadcrumb.res : cp ../../src/Types/Breadcrumb.res
-o Browseroptions.cmi : cp ../bs/src/Types/Browseroptions.cmi
-o Browseroptions.cmj : cp ../bs/src/Types/Browseroptions.cmj
-o Browseroptions.cmt : cp ../bs/src/Types/Browseroptions.cmt
-o Browseroptions.res : cp ../../src/Types/Browseroptions.res
-build install.stamp : touch Severity.cmi Severity.cmj Attachment.cmi Attachment.cmj Breadcrumb.cmi Breadcrumb.cmj Browseroptions.cmi Browseroptions.cmj 
+o BreadCrumb.cmi : cp ../bs/src/Types/BreadCrumb.cmi
+o BreadCrumb.cmj : cp ../bs/src/Types/BreadCrumb.cmj
+o BreadCrumb.cmt : cp ../bs/src/Types/BreadCrumb.cmt
+o BreadCrumb.res : cp ../../src/Types/BreadCrumb.res
+o ClientReport.cmi : cp ../bs/src/Types/ClientReport.cmi
+o ClientReport.cmj : cp ../bs/src/Types/ClientReport.cmj
+o ClientReport.cmt : cp ../bs/src/Types/ClientReport.cmt
+o ClientReport.res : cp ../../src/Types/ClientReport.res
+o DataCategory.cmi : cp ../bs/src/Types/DataCategory.cmi
+o DataCategory.cmj : cp ../bs/src/Types/DataCategory.cmj
+o DataCategory.cmt : cp ../bs/src/Types/DataCategory.cmt
+o DataCategory.res : cp ../../src/Types/DataCategory.res
+o BrowserOptions.cmi : cp ../bs/src/Types/BrowserOptions.cmi
+o BrowserOptions.cmj : cp ../bs/src/Types/BrowserOptions.cmj
+o BrowserOptions.cmt : cp ../bs/src/Types/BrowserOptions.cmt
+o BrowserOptions.res : cp ../../src/Types/BrowserOptions.res
+build install.stamp : touch Misc.cmi Misc.cmj Context.cmi Context.cmj Request.cmi Request.cmj Severity.cmi Severity.cmj Attachment.cmi Attachment.cmj BreadCrumb.cmi BreadCrumb.cmj ClientReport.cmi ClientReport.cmj DataCategory.cmi DataCategory.cmj BrowserOptions.cmi BrowserOptions.cmj 
