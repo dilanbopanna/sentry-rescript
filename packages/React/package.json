@@ -1,0 +1,27 @@
+{
+  "name": "sentry-rescript-react",
+  "description": "Sentry-React Bindings for Rescript",
+  "version": "0.0.1",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "re:build": "rescript",
+    "re:clean": "rescript clean",
+    "re:start": "rescript build -w",
+    "build": "run-p build:transpile build:types"
+  },
+  "keywords": [
+    "sentry",
+    "rescript",
+    "react"
+  ],
+  "devDependencies": {
+    "rescript": "10.1.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
