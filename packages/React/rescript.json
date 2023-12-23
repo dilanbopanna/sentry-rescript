@@ -1,0 +1,22 @@
+{
+  "name": "@rescript-sentry/react",
+  "namespace": "sentry-react",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "bs-dependencies": [],
+  "warnings": {
+    "number": "-103"
+  },
+  "jsx": {
+    "version": 4,
+    "mode": "automatic"
+  }
+}

@@ -1,27 +1,28 @@
 {
-  "name": "sentry-rescript",
   "version": "0.0.1",
+  "workspaces": [
+    "utilities",
+    "packages/React"
+  ],
   "keywords": [
     "rescript",
     "sentry",
     "react"
   ],
-  "files": [
-    "src/!(*.bs.js)",
-    "*.md",
-    "bsconfig.json",
-    "package.json"
-  ],
   "author": "Dilan Bopanna <bopannamj@gmail.com>",
   "scripts": {
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "build": "rescript build -with-deps",
     "re:build": "rescript",
     "re:clean": "rescript clean",
-    "re:start": "rescript build -w"
+    "re:start": "rescript build -w",
+    "watch": "rewatch watch ."
   },
   "devDependencies": {
-    "rescript": "10.1.4"
+    "parcel": "^2.9.2",
+    "@rolandpeelen/rewatch": "^0.0.12-ff0a51e.0",
+    "rescript": "^11.0.0-rc.5"
   },
   "publishConfig": {
     "access": "public"

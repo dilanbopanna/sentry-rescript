@@ -5,7 +5,7 @@
   "bsc-flags": ["-bs-no-version-header", "-bs-super-errors"],
   "sources": [
     {
-      "dir": "src",
+      "dir": "utilities",
       "subdirs": true
     },
     {
@@ -14,13 +14,16 @@
     }
   ],
   "ppx-flags": [],
-  "package-specs": {
-    "module": "commonjs",
-    "in-source": true
-  },
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
   "warnings": {
     "number": "+R-48",
     "error": "+R"
   },
-  "bs-dependencies": []
+  "bs-dependencies": ["@rescript-sentry/react"],
+  "pinned-dependencies": ["@rescript-sentry/react"]
 }

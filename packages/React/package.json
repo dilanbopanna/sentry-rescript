@@ -1,10 +1,7 @@
 {
-  "name": "sentry-rescript-react",
-  "description": "Sentry-React Bindings for Rescript",
+  "name": "@rescript-sentry/react",
   "version": "0.0.1",
-  "files": [
-    "src"
-  ],
+  "description": "Sentry-React Bindings for Rescript",
   "scripts": {
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -13,13 +10,21 @@
     "re:start": "rescript build -w",
     "build": "run-p build:transpile build:types"
   },
+  "author": "Dilan Bopanna <bopannamj@gmail.com>",
+  "contributors": [
+    "Praful Koppalkar <praful.koppalkar@gmail.com>"
+  ],
   "keywords": [
     "sentry",
     "rescript",
     "react"
   ],
+  "files": [
+    "/src",
+    "/rescript.json"
+  ],
   "devDependencies": {
-    "rescript": "10.1.4"
+    "rescript": "^11.0.0-beta.4"
   },
   "publishConfig": {
     "access": "public"

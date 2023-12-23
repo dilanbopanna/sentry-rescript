@@ -1,10 +1,25 @@
-10.1.4
-/Users/prafulkoppalkar/Desktop/Repos/sentry-rescript
+11.0.0-rc.8
+/Users/bopannaj/Per-Code/sentry-rescript
 0
-bsconfig.json	0x1.96169b58p+30
-packages	0x1.96169b58p+30
-packages/React	0x1.96169b58p+30
-src	0x1.9615ec68p+30
-src/Types	0x1.96166a6cp+30
+rescript.json	0x1.9619a8ccp+30
+packages	0x1.96166464p+30
+packages/React	0x1.961999ap+30
+packages/React/src	0x1.9619ad14p+30
+packages/React/lib	0x1.961999ap+30
+packages/React/lib/bs	0x1.9619a73cp+30
+packages/React/lib/bs/src	0x1.9619a73cp+30
+packages/React/lib/ocaml	0x1.96199d2p+30
+packages/Browser	0x1.96166484p+30
+packages/Browser/src	0x1.96166484p+30
+utilities	0x1.9619a9ecp+30
+utilities/src	0x1.9619a57p+30
+utilities/src/Types	0x1.9619a944p+30
+utilities/lib	0x1.961999c4p+30
+utilities/lib/bs	0x1.961999c4p+30
+utilities/lib/bs/src	0x1.9619a57p+30
+utilities/lib/bs/src/Types	0x1.961999c4p+30
+utilities/lib/js	0x1.961999c4p+30
+utilities/lib/js/src	0x1.961999c4p+30
+utilities/lib/js/src/Types	0x1.9619a944p+30
 ===
-/Users/prafulkoppalkar/Desktop/Repos/sentry-rescript/node_modules/rescript/darwinarm64/rescript.exe	0x1.96169b58p+30
+/Users/bopannaj/Per-Code/sentry-rescript/node_modules/rescript/darwinarm64/rescript.exe	0x1.9619ad14p+30

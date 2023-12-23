@@ -4,10 +4,10 @@ Context
 Request
 Severity
 Attachment
-BreadCrumb
+Breadcrumb
 ClientReport
 DataCategory
-BrowserOptions
-src/Types	
+Browseroptions
+utilities/src/Types	
 1
 0

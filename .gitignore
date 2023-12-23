@@ -15,7 +15,6 @@ dist/
 .bsb.lock
 
 *.log
-*.bs.js
 lib/bs/build.ninja
 lib/bs/.bsdeps
 lib/bs/.compiler.log

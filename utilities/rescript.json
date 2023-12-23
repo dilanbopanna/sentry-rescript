@@ -1,0 +1,10 @@
+{
+  "name": "utilities",
+  "namespace": false,
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ]
+}
