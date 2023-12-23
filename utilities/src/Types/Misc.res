@@ -38,19 +38,18 @@ type workerLocation = {
   toString: unit => string,
 }
 
-// type primitive = Float(float) | String(string) | Boolean(bool) | BigInt(int) | Symbol(symbol) | Null(Js.Nullable.null)
+type primitive<'a> =
+  | Undefined(option<'a>)
+  | Null(Js.Nullable.t<'a>)
+  | Boolean(bool)
+  | BigInt(int)
+  | Number(float)
+  | String(string)
+  | Symbol(string)
 
-type rec primitive<'a> =
-  | Undefined: primitive<option<'a>>
-  | Null: primitive<Js.Nullable.t<'a>>
-  | Boolean: primitive<bool>
-  | BigInt: primitive<int>
-  | Number: primitive<float>
-  | String: primitive<string>
-  | Symbol: primitive<string>
 
-type rec httpHeaderValue<'a> =
-  | String: httpHeaderValue<string>
-  | ArrayString: httpHeaderValue<array<string>>
-  | Number: httpHeaderValue<float>
-  | Null: httpHeaderValue<Js.Nullable.t<'a>>
+type httpHeaderValue<'a> =
+  | String(string)
+  | ArrayString(array<string>)
+  | Number(float)
+  | Null(Js.Nullable.t<'a>)

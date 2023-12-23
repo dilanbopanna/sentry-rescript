@@ -10,6 +10,9 @@
     "react"
   ],
   "author": "Dilan Bopanna <bopannamj@gmail.com>",
+  "contributors": [
+    "Praful Koppalkar <praful.koppalkar@gmail.com>"
+  ],
   "scripts": {
     "test": "react-scripts test",
     "eject": "react-scripts eject",
