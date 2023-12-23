@@ -19,7 +19,3 @@ user_data.sh
 **/**.bs.js
 
 *.log
-lib/bs/build.ninja
-lib/bs/.bsdeps
-lib/bs/.compiler.log
-lib/bs/.bsbuild
