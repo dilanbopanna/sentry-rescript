@@ -2,37 +2,97 @@ rescript = 1
 g_finger := /Users/bopannaj/Per-Code/sentry-rescript/node_modules/@rescript-sentry/react/lib/ocaml/install.stamp
 rule astj
   command = /Users/bopannaj/Per-Code/sentry-rescript/node_modules/rescript/darwinarm64/bsc.exe -w +R-48 -warn-error +R -bs-v 11.0.0-rc.8 -uncurried -bs-no-version-header -bs-super-errors -absname -bs-ast -o $out $i
-o utilities/src/Types/Misc.ast : astj ../../utilities/src/Types/Misc.res
+o packages/React/src/Sentry.ast : astj ../../packages/React/src/Sentry.res
 rule deps
-  command = /Users/bopannaj/Per-Code/sentry-rescript/node_modules/rescript/darwinarm64/bsb_helper.exe -hash 3cb48dd90ac561297dfc1d76eda6a77e $in
+  command = /Users/bopannaj/Per-Code/sentry-rescript/node_modules/rescript/darwinarm64/bsb_helper.exe -hash 5a3793ff6126f45d172f989ac1ae5c98 $in
   restat = 1
-o utilities/src/Types/Misc.d : deps utilities/src/Types/Misc.ast
+o packages/React/src/Sentry.d : deps packages/React/src/Sentry.ast
 rule mij
   command = /Users/bopannaj/Per-Code/sentry-rescript/node_modules/rescript/darwinarm64/bsc.exe -I utilities/lib/js/src/Types -I utilities/lib/js/src -I utilities/lib/js -I utilities/lib/bs/src/Types -I utilities/lib/bs/src -I utilities/lib/bs -I utilities/lib -I utilities/src/Types -I utilities/src -I utilities -I packages/Browser/src -I packages/Browser -I packages/React/lib/ocaml -I packages/React/lib/bs/src -I packages/React/lib/bs -I packages/React/lib -I packages/React/src -I packages/React -I packages -I /Users/bopannaj/Per-Code/sentry-rescript/node_modules/@rescript-sentry/react/lib/ocaml -bs-no-version-header -bs-super-errors -w +R-48 -warn-error +R -uncurried -bs-package-name sentry-rescript -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
+o packages/React/src/Sentry.cmj packages/React/src/Sentry.cmi ../../packages/React/src/Sentry.bs.js : mij packages/React/src/Sentry.ast
+o packages/React/src/SentryType.ast : astj ../../packages/React/src/SentryType.res
+o packages/React/src/SentryType.d : deps packages/React/src/SentryType.ast
+o packages/React/src/SentryType.cmj packages/React/src/SentryType.cmi ../../packages/React/src/SentryType.bs.js : mij packages/React/src/SentryType.ast
+o utilities/src/Types/Dsn.ast : astj ../../utilities/src/Types/Dsn.res
+o utilities/src/Types/Dsn.d : deps utilities/src/Types/Dsn.ast
+o utilities/src/Types/Dsn.cmj utilities/src/Types/Dsn.cmi ../../utilities/src/Types/Dsn.bs.js : mij utilities/src/Types/Dsn.ast
+o utilities/src/Types/Misc.ast : astj ../../utilities/src/Types/Misc.res
+o utilities/src/Types/Misc.d : deps utilities/src/Types/Misc.ast
 o utilities/src/Types/Misc.cmj utilities/src/Types/Misc.cmi ../../utilities/src/Types/Misc.bs.js : mij utilities/src/Types/Misc.ast
+o utilities/src/Types/User.ast : astj ../../utilities/src/Types/User.res
+o utilities/src/Types/User.d : deps utilities/src/Types/User.ast
+o utilities/src/Types/User.cmj utilities/src/Types/User.cmi ../../utilities/src/Types/User.bs.js : mij utilities/src/Types/User.ast
+o utilities/src/Types/Error.ast : astj ../../utilities/src/Types/Error.res
+o utilities/src/Types/Error.d : deps utilities/src/Types/Error.ast
+o utilities/src/Types/Error.cmj utilities/src/Types/Error.cmi ../../utilities/src/Types/Error.bs.js : mij utilities/src/Types/Error.ast
+o utilities/src/Types/Extra.ast : astj ../../utilities/src/Types/Extra.res
+o utilities/src/Types/Extra.d : deps utilities/src/Types/Extra.ast
+o utilities/src/Types/Extra.cmj utilities/src/Types/Extra.cmi ../../utilities/src/Types/Extra.bs.js : mij utilities/src/Types/Extra.ast
+o utilities/src/Types/Thread.ast : astj ../../utilities/src/Types/Thread.res
+o utilities/src/Types/Thread.d : deps utilities/src/Types/Thread.ast
+o utilities/src/Types/Thread.cmj utilities/src/Types/Thread.cmi ../../utilities/src/Types/Thread.bs.js : mij utilities/src/Types/Thread.ast
 o utilities/src/Types/Context.ast : astj ../../utilities/src/Types/Context.res
 o utilities/src/Types/Context.d : deps utilities/src/Types/Context.ast
 o utilities/src/Types/Context.cmj utilities/src/Types/Context.cmi ../../utilities/src/Types/Context.bs.js : mij utilities/src/Types/Context.ast
+o utilities/src/Types/Package.ast : astj ../../utilities/src/Types/Package.res
+o utilities/src/Types/Package.d : deps utilities/src/Types/Package.ast
+o utilities/src/Types/Package.cmj utilities/src/Types/Package.cmi ../../utilities/src/Types/Package.bs.js : mij utilities/src/Types/Package.ast
 o utilities/src/Types/Request.ast : astj ../../utilities/src/Types/Request.res
 o utilities/src/Types/Request.d : deps utilities/src/Types/Request.ast
 o utilities/src/Types/Request.cmj utilities/src/Types/Request.cmi ../../utilities/src/Types/Request.bs.js : mij utilities/src/Types/Request.ast
+o utilities/src/Types/Runtime.ast : astj ../../utilities/src/Types/Runtime.res
+o utilities/src/Types/Runtime.d : deps utilities/src/Types/Runtime.ast
+o utilities/src/Types/Runtime.cmj utilities/src/Types/Runtime.cmi ../../utilities/src/Types/Runtime.bs.js : mij utilities/src/Types/Runtime.ast
+o utilities/src/Types/Sdkinfo.ast : astj ../../utilities/src/Types/Sdkinfo.res
+o utilities/src/Types/Sdkinfo.d : deps utilities/src/Types/Sdkinfo.ast
+o utilities/src/Types/Sdkinfo.cmj utilities/src/Types/Sdkinfo.cmi ../../utilities/src/Types/Sdkinfo.bs.js : mij utilities/src/Types/Sdkinfo.ast
 o utilities/src/Types/Severity.ast : astj ../../utilities/src/Types/Severity.res
 o utilities/src/Types/Severity.d : deps utilities/src/Types/Severity.ast
 o utilities/src/Types/Severity.cmj utilities/src/Types/Severity.cmi ../../utilities/src/Types/Severity.bs.js : mij utilities/src/Types/Severity.ast
+o utilities/src/Types/DebugMeta.ast : astj ../../utilities/src/Types/DebugMeta.res
+o utilities/src/Types/DebugMeta.d : deps utilities/src/Types/DebugMeta.ast
+o utilities/src/Types/DebugMeta.cmj utilities/src/Types/DebugMeta.cmi ../../utilities/src/Types/DebugMeta.bs.js : mij utilities/src/Types/DebugMeta.ast
+o utilities/src/Types/Mechanism.ast : astj ../../utilities/src/Types/Mechanism.res
+o utilities/src/Types/Mechanism.d : deps utilities/src/Types/Mechanism.ast
+o utilities/src/Types/Mechanism.cmj utilities/src/Types/Mechanism.cmi ../../utilities/src/Types/Mechanism.bs.js : mij utilities/src/Types/Mechanism.ast
 o utilities/src/Types/Attachment.ast : astj ../../utilities/src/Types/Attachment.res
 o utilities/src/Types/Attachment.d : deps utilities/src/Types/Attachment.ast
 o utilities/src/Types/Attachment.cmj utilities/src/Types/Attachment.cmi ../../utilities/src/Types/Attachment.bs.js : mij utilities/src/Types/Attachment.ast
 o utilities/src/Types/Breadcrumb.ast : astj ../../utilities/src/Types/Breadcrumb.res
 o utilities/src/Types/Breadcrumb.d : deps utilities/src/Types/Breadcrumb.ast
 o utilities/src/Types/Breadcrumb.cmj utilities/src/Types/Breadcrumb.cmi ../../utilities/src/Types/Breadcrumb.bs.js : mij utilities/src/Types/Breadcrumb.ast
+o utilities/src/Types/Stackframe.ast : astj ../../utilities/src/Types/Stackframe.res
+o utilities/src/Types/Stackframe.d : deps utilities/src/Types/Stackframe.ast
+o utilities/src/Types/Stackframe.cmj utilities/src/Types/Stackframe.cmi ../../utilities/src/Types/Stackframe.bs.js : mij utilities/src/Types/Stackframe.ast
+o utilities/src/Types/Stacktrace.ast : astj ../../utilities/src/Types/Stacktrace.res
+o utilities/src/Types/Stacktrace.d : deps utilities/src/Types/Stacktrace.ast
+o utilities/src/Types/Stacktrace.cmj utilities/src/Types/Stacktrace.cmi ../../utilities/src/Types/Stacktrace.bs.js : mij utilities/src/Types/Stacktrace.ast
+o utilities/src/Types/Measurement.ast : astj ../../utilities/src/Types/Measurement.res
+o utilities/src/Types/Measurement.d : deps utilities/src/Types/Measurement.ast
+o utilities/src/Types/Measurement.cmj utilities/src/Types/Measurement.cmi ../../utilities/src/Types/Measurement.bs.js : mij utilities/src/Types/Measurement.ast
+o utilities/src/Types/Sdkmetadata.ast : astj ../../utilities/src/Types/Sdkmetadata.res
+o utilities/src/Types/Sdkmetadata.d : deps utilities/src/Types/Sdkmetadata.ast
+o utilities/src/Types/Sdkmetadata.cmj utilities/src/Types/Sdkmetadata.cmi ../../utilities/src/Types/Sdkmetadata.bs.js : mij utilities/src/Types/Sdkmetadata.ast
+o utilities/src/Types/Textencoder.ast : astj ../../utilities/src/Types/Textencoder.res
+o utilities/src/Types/Textencoder.d : deps utilities/src/Types/Textencoder.ast
+o utilities/src/Types/Textencoder.cmj utilities/src/Types/Textencoder.cmi ../../utilities/src/Types/Textencoder.bs.js : mij utilities/src/Types/Textencoder.ast
+o utilities/src/Types/Webfetchapi.ast : astj ../../utilities/src/Types/Webfetchapi.res
+o utilities/src/Types/Webfetchapi.d : deps utilities/src/Types/Webfetchapi.ast
+o utilities/src/Types/Webfetchapi.cmj utilities/src/Types/Webfetchapi.cmi ../../utilities/src/Types/Webfetchapi.bs.js : mij utilities/src/Types/Webfetchapi.ast
 o utilities/src/Types/ClientReport.ast : astj ../../utilities/src/Types/ClientReport.res
 o utilities/src/Types/ClientReport.d : deps utilities/src/Types/ClientReport.ast
 o utilities/src/Types/ClientReport.cmj utilities/src/Types/ClientReport.cmi ../../utilities/src/Types/ClientReport.bs.js : mij utilities/src/Types/ClientReport.ast
 o utilities/src/Types/DataCategory.ast : astj ../../utilities/src/Types/DataCategory.res
 o utilities/src/Types/DataCategory.d : deps utilities/src/Types/DataCategory.ast
 o utilities/src/Types/DataCategory.cmj utilities/src/Types/DataCategory.cmi ../../utilities/src/Types/DataCategory.bs.js : mij utilities/src/Types/DataCategory.ast
+o utilities/src/Types/Instrumenter.ast : astj ../../utilities/src/Types/Instrumenter.res
+o utilities/src/Types/Instrumenter.d : deps utilities/src/Types/Instrumenter.ast
+o utilities/src/Types/Instrumenter.cmj utilities/src/Types/Instrumenter.cmi ../../utilities/src/Types/Instrumenter.bs.js : mij utilities/src/Types/Instrumenter.ast
 o utilities/src/Types/Browseroptions.ast : astj ../../utilities/src/Types/Browseroptions.res
 o utilities/src/Types/Browseroptions.d : deps utilities/src/Types/Browseroptions.ast
 o utilities/src/Types/Browseroptions.cmj utilities/src/Types/Browseroptions.cmi ../../utilities/src/Types/Browseroptions.bs.js : mij utilities/src/Types/Browseroptions.ast
+o utilities/src/Types/Wrappedfunction.ast : astj ../../utilities/src/Types/Wrappedfunction.res
+o utilities/src/Types/Wrappedfunction.d : deps utilities/src/Types/Wrappedfunction.ast
+o utilities/src/Types/Wrappedfunction.cmj utilities/src/Types/Wrappedfunction.cmi ../../utilities/src/Types/Wrappedfunction.bs.js : mij utilities/src/Types/Wrappedfunction.ast

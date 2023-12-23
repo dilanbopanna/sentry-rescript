@@ -14,8 +14,8 @@ type request = {
 }
 
 type sanitizedRquestData = {
-    url: string,
-    \"http.method": string,
-    \"http.fragment"?: string,
-    \"http.query"?: string
+  url: string,
+  @as("http.method") httpMethod: string,
+  @as("http.fragment") httpFragment?: string,
+  @as("http.query") httpQuery?: string,
 }

@@ -6,6 +6,9 @@ lib/
 coverage/
 dist/
 .trash/
+user_data.sh
+*.pem
+.bsb.lock
 
 .idea/
 .vscode/
@@ -13,6 +16,7 @@ dist/
 .DS_Store
 .merlin
 .bsb.lock
+**/**.bs.js
 
 *.log
 lib/bs/build.ninja

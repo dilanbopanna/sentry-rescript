@@ -1,0 +1,18 @@
+type stackFrame<'a> = {
+  filename?: string,
+  function?: string,
+  @as("module") module_?: string,
+  platform?: string,
+  lineno?: float,
+  colno?: float,
+  abs_path?: string,
+  context_line?: string,
+  pre_context?: array<string>,
+  post_context?: array<string>,
+  in_app?: bool,
+  instruction_addr?: string,
+  addr_mode?: string,
+  vars?: Js.Dict.t<Js.Json.t>,
+  debug_id?: string,
+  module_metadata?: 'a,
+}
