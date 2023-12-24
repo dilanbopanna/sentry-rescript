@@ -40,14 +40,14 @@ type workerLocation = {
 
 // type primitive = Float(float) | String(string) | Boolean(bool) | BigInt(int) | Symbol(symbol) | Null(Js.Nullable.null)
 
-type rec primitive<'a> =
-  | Undefined: primitive<option<'a>>
-  | Null: primitive<Js.Nullable.t<'a>>
-  | Boolean: primitive<bool>
-  | BigInt: primitive<int>
-  | Number: primitive<float>
-  | String: primitive<string>
-  | Symbol: primitive<string>
+type primitive<'a> =
+  | Undefined(Js.Undefined.t<'a>)
+  | Null(Js.Nullable.t<'a>)
+  | Boolean(bool)
+  | BigInt(int)
+  | Number(float)
+  | String(string)
+  | Symbol(string)
 
 type rec httpHeaderValue<'a> =
   | String: httpHeaderValue<string>
