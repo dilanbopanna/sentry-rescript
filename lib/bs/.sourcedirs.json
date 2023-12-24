@@ -1,0 +1,1 @@
+{ "dirs" : [ "packages/React/src" , "utilities/src" , "utilities/src/Types" ] , "pkgs" : [ [ "@rescript-sentry/react" , "/Users/bopannaj/Per-Code/sentry-rescript/node_modules/@rescript-sentry/react" ] ] , "generated" : [] }
