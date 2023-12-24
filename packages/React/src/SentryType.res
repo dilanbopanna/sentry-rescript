@@ -1,4 +1,1 @@
-type browserOptions = {
-  ...Browseroptions.browserClientReplayOptions,
-  ...Browseroptions.browserClientProfilingOptions,
-}
+type browserOptions
