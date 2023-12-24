@@ -41,7 +41,7 @@ type response = {
   url: string,
   headers: Webfetchapi.webFetchHeaders,
 }
-type handlerDataFetch<'a, 'b> = {
+type handlerDataFetch<'a> = {
   args: array<'a>,
   fetchData: sentryFetchData,
   startTimestamp: float,
