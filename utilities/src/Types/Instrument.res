@@ -47,7 +47,7 @@ type handlerDataFetch<'a, 'b> = {
   startTimestamp: float,
   endTimestamp?: float,
   response?: response,
-  error?: 'b,
+  error?: unknown,
 }
 
 type handlerDataDom = {
