@@ -78,12 +78,24 @@ type traceContext = {
 type transaction
 
 /** Span holding trace_id, span_id */
-type span = {
-  ...spanContext,
+type rec span = {
   /**
    * Human-readable identifier for the span. Identical to span.description.
    */
   name: string,
+  description?: string,
+  op?: string,
+  status?: string,
+  endTimestamp?: float,
+  /**
+   * Parent Span ID
+   */
+  parentSpanId?: string,
+  origin?: spanOrigin,
+  /**
+   * Was this span chosen to be sent as part of the sample?
+   */
+  sampled?: bool,
   /**
    * @inheritDoc
    */
@@ -99,11 +111,11 @@ type span = {
   /**
    * @inheritDoc
    */
-  tags: Js.Dict.t<Js.Json.t>,
+  tags?: Js.Dict.t<Js.Json.t>,
   /**
-   * @inheritDoc
+   * Data of the Span.
    */
-  data: Js.Dict.t<Js.Json.t>,
+  data?: Js.Dict.t<Js.Json.t>,
   /**
    * The transaction containing this span
    */
@@ -120,7 +132,7 @@ type span = {
   /**
    * End the current span.
    */
-  end: (~endTimestamp: float, unit) => void,
+  end: (~endTimestamp: float, unit) => unit,
   /**
    * Sets the tag attribute on the current span.
    *
@@ -129,24 +141,24 @@ type span = {
    * @param key Tag key
    * @param value Tag value
    */
-  setTag: (~key: string, ~value: Js.Json.t) => Js.this,
+  setTag: (~key: string, ~value: Js.Json.t) => Js.Json.t,
   /**
    * Sets the data attribute on the current span
    * @param key Data key
    * @param value Data value
    */
-  setData: (~key: string, ~value: Js.Json.t) => Js.this,
+  setData: (~key: string, ~value: Js.Json.t) => Js.Json.t,
   /**
    * Sets the status attribute on the current span
    * See: {@sentry/tracing SpanStatus} for possible values
    * @param status http code used to set the status
    */
-  setStatus: string => Js.this,
+  setStatus: string => Js.Json.t,
   /**
    * Sets the status attribute on the current span based on the http code
    * @param httpStatus http code used to set the status
    */
-  setHttpStatus: float => Js.this,
+  setHttpStatus: float => Js.Json.t,
   /**
    * Set the name of the span.
    */
@@ -165,7 +177,7 @@ type span = {
   /** Returns the current span properties as a `SpanContext` */
   toContext: unit => spanContext,
   /** Updates the current span with a new `SpanContext` */
-  updateWithContext: spanContext => Js.this,
+  updateWithContext: spanContext => Js.Json.t,
   /** Convert the object to JSON for w. spans array info only */
   getTraceContext: unit => traceContext,
   /** Convert the object to JSON */
