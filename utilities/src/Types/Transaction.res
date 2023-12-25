@@ -40,7 +40,11 @@ type customSamplingContext = {
 /**
  * Data pulled from a `sentry-trace` header
  */
-type traceparentData = Js.Json.t
+type traceparentData = {
+  parentSampled?: bool,
+  parentSpanId?: string,
+  traceId?: string
+}
 
 type transactionContext = {
   ...Span.spanContext,
@@ -83,9 +87,11 @@ type samplingContext = {
 }
 
 type transaction = {
-  ///TODO figure out how to exculde type while type spreading
-
-  //...transactionContext,// exculde <Span, 'setName' | 'name'>
+  trimEnd?: bool,
+  /**
+   * If this transaction has a parent, the parent's sampling decision
+   */
+  parentSampled?: bool,
 
   /**
    * @inheritDoc
@@ -134,12 +140,12 @@ type transaction = {
   /** Returns the current transaction properties as a `TransactionContext` */
   toContext: unit => transactionContext,
   /** Updates the current transaction with a new `TransactionContext` */
-  updateWithContext: (~transactionContext: transactionContext) => unit,
+  updateWithContext: (transactionContext) => unit,
   /**
    * Set metadata for this transaction.
    * @hidden
    */
-  setMetadata: (~newMetadata:option<transactionMetadata>) => unit,
+  setMetadata: (option<transactionMetadata>) => unit,
   /** Return the current Dynamic Sampling Context of this transaction */
   getDynamicSamplingContext: unit => option<dynamicSamplingContext>,
 }

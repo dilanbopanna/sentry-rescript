@@ -16,7 +16,7 @@ type captureContext //TODO
  * Note that `ErrorEvent`s do not have a type (hence its undefined),
  * while all other events are required to have one.
  */
-type eventType = [ #transaction | #profile | #replay_event | #feedback ]
+type eventType = option<[ #transaction | #profile | #replay_event | #feedback ]>
 type levelType = Severity(Severity.severity) | SeverityLevel(Severity.severityLevel)
 type event<'a>= {
   event_id?: string,
