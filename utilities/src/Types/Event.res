@@ -1,13 +1,7 @@
 /** JSDoc */
-type exceptionType<'a> = {
-    values?: array<Exception.exception_<'a>>,
-  }
-type transactionInfo = {
-    soruce: Transaction.transactionSource
-}
-type thread<'a> = {
-    values: array<Thread.thread<'a>>
-}
+type exceptionType<'a> = {values?: array<Exception.exception_<'a>>}
+type transactionInfo = {soruce: Transaction.transactionSource}
+type thread<'a> = {values: array<Thread.thread<'a>>}
 
 type captureContext //TODO
 
@@ -16,15 +10,15 @@ type captureContext //TODO
  * Note that `ErrorEvent`s do not have a type (hence its undefined),
  * while all other events are required to have one.
  */
-type eventType = option<[ #transaction | #profile | #replay_event | #feedback ]>
-type levelType = Severity(Severity.severity) | SeverityLevel(Severity.severityLevel)
-type event<'a>= {
+type eventType = option<[#transaction | #profile | #replay_event | #feedback]>
+
+type event<'a> = {
   event_id?: string,
   message?: string,
   timestamp?: float,
   start_timestamp?: float,
   // eslint-disable-next-line deprecation/deprecation
-  level?: levelType,
+  level?: Severity.severityLevel,
   platform?: string,
   logger?: string,
   server_name?: string,
@@ -36,7 +30,7 @@ type event<'a>= {
   transaction?: string,
   modules?: Js.Dict.t<string>,
   fingerprint?: array<string>,
-  @as("exception") exception_ ?: exceptionType<'a>,
+  @as("exception") exception_?: exceptionType<'a>,
   breadcrumbs?: array<Breadcrumb.breadcrumb>,
   contexts?: Context.contexts,
   tags?: Js.Json.t,
@@ -49,18 +43,16 @@ type event<'a>= {
   // A place to stash data which is needed at some point in the SDK's event processing pipeline but which shouldn't get sent to Sentry
   sdkProcessingMetadata?: Js.Json.t,
   transaction_info?: transactionInfo,
-  threads?:thread<'a>,
+  threads?: thread<'a>,
 }
-
-
 
 type errorEvent<'a> = {
   ...event<'a>,
-  @as("type") errorType : option<'a>,
+  @as("type") errorType: option<'a>,
 }
 type transactionEvent<'a> = {
-...event<'a>,
- @as("type") transactionType: eventType
+  ...event<'a>,
+  @as("type") transactionType: eventType,
 }
 
 /** JSDoc */
@@ -70,7 +62,7 @@ type eventHint<'a> = {
   mechanism?: option<Mechanism.mechanism>,
   syntheticException?: Js.Nullable.t<Js.Exn.t>,
   originalException?: unknown,
-  attachments?:array<Attachment.attachment>,
+  attachments?: array<Attachment.attachment>,
   data?: 'a,
   integrations?: array<string>,
 }
