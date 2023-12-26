@@ -12,7 +12,11 @@ type rec hub<'t, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'i> = {
   getClient: unit => Js.Nullable.t<client>,
   getScope: unit => scope,
   getIsolationScope: unit => scope,
-  captureException: (~exception_: 'b, ~hint: Event.eventHint<'a>=?, unit) => string,
+  captureException: (
+    @as("exception") ~exception_: 'b,
+    ~hint: Event.eventHint<'a>=?,
+    unit,
+  ) => string,
   captureMessage: (
     ~message: string,
     ~level: Severity.severityLevel=?,
