@@ -40,29 +40,14 @@ type serializedCheckIn = {
   contexts?: contexts,
 }
 
-type heartbeatCheckIn = {
-  monitorSlug: string,
-  status: checkInStatus,
-}
-
 type inProgressStatus = [#in_progress]
 
-type inProgressCheckIn = {
+type checkIn = {
   monitorSlug: string,
   status: checkInStatus,
-}
-
-type finishedCheckIn = {
-  monitorSlug: string,
-  status: checkInStatus,
-  checkInId: string,
+  checkInId?: string,
   duration?: float,
 }
-
-type checkIn =
-  | HeartbeatCheckIn(heartbeatCheckIn)
-  | InProgressCheckIn(inProgressCheckIn)
-  | FinishedCheckIn(finishedCheckIn)
 
 type serializedMonitorConfig = option<string>
 
