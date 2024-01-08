@@ -28,5 +28,12 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "@rescript/react": "^0.12.0-alpha.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "rescript": "^11.0.0-beta.4",
+    "@sentry/react": "^7.92.0"
   }
 }
