@@ -1,5 +1,6 @@
 {
   "name": "@rescript-sentry/react",
+  "suffix": ".bs.js",
   "namespace": "sentry-react",
   "sources": [
     {
