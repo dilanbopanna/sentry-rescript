@@ -1,0 +1,23 @@
+{
+  "name": "rescript-sentry-examples",
+  "suffix": ".bs.js",
+  "namespace": false,
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "bs-dependencies": ["@rescript/react"],
+  "warnings": {
+    "number": "-103"
+  },
+  "jsx": {
+    "mode": "automatic",
+    "version": 4
+  }
+}

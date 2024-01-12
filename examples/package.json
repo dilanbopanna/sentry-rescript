@@ -1,0 +1,29 @@
+{
+  "name": "rescript-sentry-examples",
+  "description": "Examples for ReScript-Sentry.",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "re:clean": "rescript clean",
+    "re:start": "rescript build -w",
+    "start": "parcel serve src/index.html"
+  },
+  "files": [
+    "/src",
+    "/bsconfig.json"
+  ],
+  "author": "Dilan Bopanna <bopannamj@gmail.com>",
+  "devDependencies": {
+    "process": "^0.11.10",
+    "rescript": "^10.1.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@rescript/react": "^0.12.0",
+    "parcel": "^2.9.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
+}

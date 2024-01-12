@@ -5,11 +5,7 @@
   "bsc-flags": ["-bs-no-version-header", "-bs-super-errors"],
   "sources": [
     {
-      "dir": "utilities/src",
-      "subdirs": true
-    },
-    {
-      "dir": "packages/React/src",
+      "dir": "src",
       "subdirs": true
     }
   ],
