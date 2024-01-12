@@ -21,3 +21,7 @@ npm install @rescript-sentry/react
 ```
 
 Feel free to reach out if you need any further assistance or have suggestions for improvement.
+
+## Changelog
+
+See [CHANGELOG](./CHANGELOG.md).
