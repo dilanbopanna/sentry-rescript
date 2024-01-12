@@ -1,6 +1,6 @@
 {
   "name": "@rescript-sentry/react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "description": "This library provides Rescript Bindings for sentry-react",
   "scripts": {
@@ -18,14 +18,8 @@
   ],
   "files": [
     "/src",
-    "/rescript.json"
+    "/bsconfig.json"
   ],
-  "devDependencies": {
-    "rescript": "^10.1.4"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "peerDependencies": {
     "@rescript/react": ">=0.11.0",
     "react": "^18.0.0",

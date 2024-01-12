@@ -1,2 +1,4 @@
 @react.component
-let make = () => <div> {React.string("Hello World")} </div>
+let make = () => {
+  <div> {React.string("Hello World")} </div>
+}
