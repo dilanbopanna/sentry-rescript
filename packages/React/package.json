@@ -1,6 +1,6 @@
 {
   "name": "@rescript-sentry/react",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "description": "This library provides Rescript Bindings for sentry-react",
   "scripts": {
@@ -11,6 +11,8 @@
   "contributors": [
     "Praful Koppalkar <praful.koppalkar@gmail.com>"
   ],
+  "repository": "https://github.com/dilanbopanna/sentry-rescript",
+  "bugs": "https://github.com/dilanbopanna/sentry-rescript/issues",
   "keywords": [
     "sentry",
     "rescript",
