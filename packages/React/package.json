@@ -20,12 +20,6 @@
     "/src",
     "/bsconfig.json"
   ],
-  "devDependencies": {
-    "rescript": "^10.1.4"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "peerDependencies": {
     "@rescript/react": ">=0.11.0",
     "react": "^18.0.0",

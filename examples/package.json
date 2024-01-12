@@ -8,10 +8,6 @@
     "re:start": "rescript build -w",
     "start": "parcel serve src/index.html"
   },
-  "files": [
-    "/src",
-    "/bsconfig.json"
-  ],
   "author": "Dilan Bopanna <bopannamj@gmail.com>",
   "devDependencies": {
     "process": "^0.11.10",
@@ -21,7 +17,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@rescript-sentry/react": "^0.0.2",
+    "@rescript-sentry/react": "^0.0.3",
     "@rescript/react": "^0.12.0",
     "@sentry/react": "^7.93.0",
     "parcel": "^2.9.2",
