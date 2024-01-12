@@ -1,7 +1,7 @@
 {
-  "name": "@rescript-sentry/react",
+  "name": "@rescript-sentry/types",
   "version": "0.0.1",
-  "description": "This library provides Rescript Bindings for sentry-react",
+  "description": "Sentry Types for Rescript",
   "scripts": {
     "re:clean": "rescript clean",
     "re:start": "rescript build -w"
@@ -13,23 +13,19 @@
   "keywords": [
     "sentry",
     "rescript",
-    "react"
+    "types"
   ],
   "files": [
     "/src",
     "/rescript.json"
   ],
   "devDependencies": {
-    "rescript": "^10.1.4"
+    "rescript": "^11.0.0-beta.4"
   },
   "publishConfig": {
     "access": "public"
   },
   "peerDependencies": {
-    "@rescript/react": "^0.11.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "rescript": "^10.1.4",
-    "@sentry/react": "^7.92.0"
+    "rescript": "^11.0.0-beta.4"
   }
 }
