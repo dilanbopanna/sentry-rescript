@@ -1,14 +1,14 @@
 {
   "name": "@rescript-sentry/react",
   "version": "0.0.1",
-  "description": "Sentry-React Bindings for Rescript",
+  "private": false,
+  "description": "This library provides Rescript Bindings for sentry-react",
   "scripts": {
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "re:build": "rescript",
     "re:clean": "rescript clean",
     "re:start": "rescript build -w",
-    "build": "run-p build:transpile build:types"
+    "publish:react": "cd packages/React && npm publish --access public --scope=@sentry-rescript",
+    "publish:browser": "cd packages/Browser && npm publish --access public --scope=@sentry-rescript",
+    "publish:types": "cd packages/Types && npm publish --access public --scope=@sentry-rescript"
   },
   "author": "Dilan Bopanna <bopannamj@gmail.com>",
   "contributors": [
@@ -24,16 +24,16 @@
     "/rescript.json"
   ],
   "devDependencies": {
-    "rescript": "^11.0.0-beta.4"
+    "rescript": "^10.1.4"
   },
   "publishConfig": {
     "access": "public"
   },
   "peerDependencies": {
-    "@rescript/react": "^0.12.0-alpha.2",
+    "@rescript/react": "^0.11.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "rescript": "^11.0.0-beta.4",
+    "rescript": "^10.1.4",
     "@sentry/react": "^7.92.0"
   }
 }

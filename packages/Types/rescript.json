@@ -1,0 +1,22 @@
+{
+  "name": "@rescript-sentry/types",
+  "suffix": ".bs.js",
+  "namespace": "sentry-rescript-types",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "warnings": {
+    "number": "-103"
+  },
+  "jsx": {
+    "version": 4,
+    "mode": "automatic"
+  }
+}

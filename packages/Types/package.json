@@ -1,0 +1,31 @@
+{
+  "name": "@rescript-sentry/types",
+  "version": "0.0.1",
+  "description": "Sentry Types for Rescript",
+  "scripts": {
+    "re:clean": "rescript clean",
+    "re:start": "rescript build -w"
+  },
+  "author": "Dilan Bopanna <bopannamj@gmail.com>",
+  "contributors": [
+    "Praful Koppalkar <praful.koppalkar@gmail.com>"
+  ],
+  "keywords": [
+    "sentry",
+    "rescript",
+    "types"
+  ],
+  "files": [
+    "/src",
+    "/rescript.json"
+  ],
+  "devDependencies": {
+    "rescript": "^11.0.0-beta.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "rescript": "^11.0.0-beta.4"
+  }
+}

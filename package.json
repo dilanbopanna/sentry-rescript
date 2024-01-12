@@ -1,8 +1,10 @@
 {
   "version": "0.0.1",
+  "private": true,
   "workspaces": [
-    "utilities",
-    "packages/React"
+    "packages/React",
+    "packages/Browser",
+    "packages/Types"
   ],
   "keywords": [
     "rescript",
@@ -10,6 +12,9 @@
     "react"
   ],
   "author": "Dilan Bopanna <bopannamj@gmail.com>",
+  "contributors": [
+    "Praful Koppalkar <praful.koppalkar@gmail.com>"
+  ],
   "scripts": {
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -23,8 +28,5 @@
     "parcel": "^2.9.2",
     "@rolandpeelen/rewatch": "^0.0.12-ff0a51e.0",
     "rescript": "^11.0.0-rc.5"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
