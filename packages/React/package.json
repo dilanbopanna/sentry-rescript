@@ -11,6 +11,8 @@
   "contributors": [
     "Praful Koppalkar <praful.koppalkar@gmail.com>"
   ],
+  "repository": "https://github.com/dilanbopanna/sentry-rescript",
+  "bugs": "https://github.com/dilanbopanna/sentry-rescript/issues",
   "keywords": [
     "sentry",
     "rescript",
