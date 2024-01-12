@@ -1,5 +1,4 @@
 {
-  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "packages/React",
@@ -16,17 +15,10 @@
     "Praful Koppalkar <praful.koppalkar@gmail.com>"
   ],
   "scripts": {
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build": "rescript build -with-deps",
-    "re:build": "rescript",
     "re:clean": "rescript clean",
     "re:start": "rescript build -w",
-    "watch": "rewatch watch ."
-  },
-  "devDependencies": {
-    "parcel": "^2.9.2",
-    "@rolandpeelen/rewatch": "^0.0.12-ff0a51e.0",
-    "rescript": "^11.0.0-rc.5"
+    "publish:react": "cd packages/React && npm publish --access public --scope=@sentry-rescript",
+    "publish:browser": "cd packages/Browser && npm publish --access public --scope=@sentry-rescript",
+    "publish:types": "cd packages/Types && npm publish --access public --scope=@sentry-rescript"
   }
 }

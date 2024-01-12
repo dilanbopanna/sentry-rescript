@@ -5,10 +5,7 @@
   "description": "This library provides Rescript Bindings for sentry-react",
   "scripts": {
     "re:clean": "rescript clean",
-    "re:start": "rescript build -w",
-    "publish:react": "cd packages/React && npm publish --access public --scope=@sentry-rescript",
-    "publish:browser": "cd packages/Browser && npm publish --access public --scope=@sentry-rescript",
-    "publish:types": "cd packages/Types && npm publish --access public --scope=@sentry-rescript"
+    "re:start": "rescript build -w"
   },
   "author": "Dilan Bopanna <bopannamj@gmail.com>",
   "contributors": [
