@@ -1,1 +1,0 @@
-type instrumenter = [#sentry | #otel]
