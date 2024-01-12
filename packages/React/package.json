@@ -18,7 +18,7 @@
   ],
   "files": [
     "/src",
-    "/rescript.json"
+    "/bsconfig.json"
   ],
   "devDependencies": {
     "rescript": "^10.1.4"

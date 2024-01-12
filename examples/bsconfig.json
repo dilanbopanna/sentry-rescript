@@ -12,7 +12,7 @@
     "module": "es6",
     "in-source": true
   },
-  "bs-dependencies": ["@rescript/react"],
+  "bs-dependencies": ["@rescript/react", "@rescript-sentry/react"],
   "warnings": {
     "number": "-103"
   },
